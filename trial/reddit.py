@@ -1,21 +1,21 @@
 import praw
 import pandas as pd
 import datetime as dt
+import argparse
 
 from praw.models import MoreComments
 
 
-def readit():
-    reddit = praw.Reddit(client_id='mpS_DJ7JYUgH4w',
-                         client_secret='LsL8Sr14gmI2cEB6jde6dpxpaMRDdg',
-                         user_agent='amsia1',
-                         username='sbhattathiri',
-                         password='UmaMaheshwaran07$')
+def read_it():
+    reddit = praw.Reddit(client_id='',
+                         client_secret='',
+                         user_agent='',
+                         username='',
+                         password='')
 
     rcricket = reddit.subreddit('Cricket')
 
-
-    hot_cricket = rcricket.hot(limit=10)
+    hot_cricket = rcricket.hot(limit=100)
 
     num = 0
     for post in hot_cricket:
@@ -31,4 +31,4 @@ def readit():
 
 
 if __name__ == '__main__':
-    readit()
+    read_it()
